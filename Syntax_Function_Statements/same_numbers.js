@@ -11,4 +11,4 @@ function solve(num) {
     return `${isSame}\n${sum}` 
 }
 
-console.log(solve(22822))
+console.log(solve(22222))
