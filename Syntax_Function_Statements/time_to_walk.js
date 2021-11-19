@@ -1,7 +1,3 @@
-function toTimeString(seconds) {
-    return (new Date(seconds * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
-  }
-
 function solve(steps, footLenght, speed) {
     let distance = (steps * footLenght)
     let extraTime = 0
@@ -12,8 +8,9 @@ function solve(steps, footLenght, speed) {
     let time = distance / speed
     time += extraTime
 
-    return toTimeString(time)
+    return (new Date(time * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
 }
 
 
 console.log(solve(4000, 0.60, 5))
+console.log(solve(2564, 0.70, 5.5))
